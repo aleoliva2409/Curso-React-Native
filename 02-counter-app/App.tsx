@@ -1,11 +1,24 @@
 import React from 'react';
-import CounterScreen from './src/screens/CounterScreen';
+import {SafeAreaView} from 'react-native';
 // import HelloWorldScreen from './src/screens/HelloWorldScreen';
+// import CounterScreen from './src/screens/CounterScreen';
+// import BoxObjectModelScreen from './src/screens/BoxObjectModelScreen';
+// import DimensionesScreen from './src/screens/DimensionsScreen';
+// import PositionScreen from './src/screens/PositionScreen';
+// import FlexScreen from './src/screens/FlexScreen';
+import HomeWorkScreen from './src/screens/HomeWorkScreen';
 
 const App = () => {
   return (
-    // <HelloWorldScreen />
-    <CounterScreen />
+    <SafeAreaView style={{flex: 1}}>
+      {/* <HelloWorldScreen /> */}
+      {/* <CounterScreen /> */}
+      {/* <BoxObjectModelScreen /> */}
+      {/* <DimensionesScreen /> */}
+      {/* <PositionScreen /> */}
+      {/* <FlexScreen /> */}
+      <HomeWorkScreen />
+    </SafeAreaView>
   );
 };
 

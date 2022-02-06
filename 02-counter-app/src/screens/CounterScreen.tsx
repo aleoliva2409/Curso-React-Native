@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text} from 'react-native';
 import Fab from '../components/Fab';
-import { styles } from '../styles/styles';
+import { counterStyles as styles } from '../styles/styles';
 
 const CounterScreen = () => {
   const [counter, setCounter] = useState(10);

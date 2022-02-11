@@ -1,12 +1,17 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import StackNavigator from './src/navigation/StackNavigator';
+import { LogBox, View } from 'react-native';
 
-const App = () => {
-  return (
-    <View>
-      <Text>Navigation App</Text>
-    </View>
-  );
-};
+LogBox.ignoreLogs([
+  "[react-native-gesture-handler] Seems like you're using an old API with gesture components, check out new Gestures system!",
+]);
+
+const App = () => (
+  <NavigationContainer>
+    <StackNavigator />
+  </NavigationContainer>
+);
 
 export default App;

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { StackScreenProps } from '@react-navigation/stack';
 import { Text, View } from 'react-native';
 import { styles } from '../theme/appTheme';
-import { RootStackParams } from '../navigation/StackNavigator';
+import { RootStackParams } from '../navigators/StackNavigator';
 
 // interface RouteParams { // ? Example 2
 //   id: number;

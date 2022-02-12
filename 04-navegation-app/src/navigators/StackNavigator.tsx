@@ -3,8 +3,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import FirstScreen from '../screens/FirstScreen';
 import SecondScreen from '../screens/SecondScreen';
 import ThirdScreen from '../screens/ThirdScreen';
-import FourthScreen from '../screens/FourthScreen';
-import FifthScreen from '../screens/FifthScreen';
 import PersonScreen from '../screens/PersonScreen';
 
 interface PersonData {
@@ -16,8 +14,6 @@ export type RootStackParams = {
   FirstScreen: undefined;
   SecondScreen: undefined;
   ThirdScreen: undefined;
-  FourthScreen: undefined;
-  FifthScreen: undefined;
   PersonScreen: PersonData;
 }
 
@@ -35,6 +31,7 @@ const StackNavigator = () => {
           elevation: 0,
           shadowColor: 'transparent',
         },
+        headerTitleAlign: 'center'
       }}>
       <Stack.Screen
         name="FirstScreen"
@@ -50,16 +47,6 @@ const StackNavigator = () => {
         name="ThirdScreen"
         options={{ title: 'Page 3' }}
         component={ThirdScreen}
-      />
-      <Stack.Screen
-        name="FourthScreen"
-        options={{ title: 'Page 4' }}
-        component={FourthScreen}
-      />
-      <Stack.Screen
-        name="FifthScreen"
-        options={{ title: 'Page 5' }}
-        component={FifthScreen}
       />
       <Stack.Screen
         name="PersonScreen"

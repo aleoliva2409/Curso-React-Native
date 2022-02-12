@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StackScreenProps } from '@react-navigation/stack';
 import { Text, View, Button, TouchableOpacity } from 'react-native';
 import { styles } from '../theme/appTheme';
+import { DrawerScreenProps } from '@react-navigation/drawer';
 
 interface Props extends StackScreenProps<any, any> {}
+// interface Props extends DrawerScreenProps<any, any> {}
 
 const FirstScreen = ({ navigation }: Props) => {
+  // useEffect(() => {
+  //   navigation.setOptions({
+  //     headerLeft: () => (
+  //       <Button title="Menu" onPress={() => navigation.toggleDrawer()} />
+  //     ),
+  //   });
+  // }, []); // ? esto sirve para colocarle un boton para hacer el toogle pero Drawer ya incluye dicho menu en la ultima version
+
+  
   return (
     <View style={styles.container}>
       <Text style={styles.title}>First Screen</Text>

@@ -1,0 +1,33 @@
+React-native-reanimated 
+
+1- first step
+
+yarn add react-native-reanimated // instale la ultima version
+
+// en el link del paso 2 esta este paso incluido, si queres ver primero la pagina podes hacerlo y seguir los pasos desde ahi
+
+2- second step
+
+installation
+
+https://docs.swmansion.com/react-native-reanimated/docs/next/fundamentals/installation
+
+follow step by step
+
+aca hay que seguir los pasos al pie de la letra como indica la pagina web
+
+3- import React in DrawerNavigator
+
+// aca importamos react en el archivo donde creamos nuestro DrawerNavigator
+
+// import React from 'react'
+
+4- run  npx react-native run-android
+
+// corremos la app, en caso de funcionarte, hace el punto 5
+
+5- if doesn't works, run next command: yarn start --reset-cache/ npx react-native start --reset-cache
+
+// dejas de ejecutar la app y corres el comando : yarn start --reset-cache/ npx react-native start --reset-cache
+
+// luego volver a ejecutar el comando del punto 4: npx react-native run-android

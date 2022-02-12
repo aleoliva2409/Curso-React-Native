@@ -11,8 +11,8 @@ LogBox.ignoreLogs([
 
 const App = () => (
   <NavigationContainer>
-    <StackNavigator />
-    {/* <DrawerNavigator /> */}
+    {/* <StackNavigator /> */}
+    <DrawerNavigator />
   </NavigationContainer>
 );
 

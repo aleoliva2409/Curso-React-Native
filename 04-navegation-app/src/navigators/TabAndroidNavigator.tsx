@@ -1,7 +1,7 @@
 import React from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
 import Tab1Screen from '../screens/Tab1Screen';
-import Tab2Screen from '../screens/Tab2Screen';
 import StackNavigator from './StackNavigator';
 import { colors } from '../theme/appTheme';
 import { Text } from 'react-native';
@@ -17,22 +17,23 @@ const TabAndroidNavigator = () => {
         backgroundColor: colors.primary,
       }}
       screenOptions={({ route }) => ({
-        tabBarIcon: ({ color }) => { // ? No viene la propiedad size en las props de este tabNavigator pero si en el de IOS
+        tabBarIcon: ({ color }) => {
+          // ? No viene la propiedad size en las props de este tabNavigator pero si en el de IOS
           let iconName: string = '';
 
           switch (route.name) {
             case 'Tab1Screen':
-              iconName = 'T1';
+              iconName = 'home-outline';
               break;
             case 'TopTabNavigator':
-              iconName = 'T2';
+              iconName = 'grid-outline';
               break;
             case 'StackNavigator':
-              iconName = 'ST';
+              iconName = 'file-tray-stacked-outline';
               break;
           }
 
-          return <Text style={{ color }}>{iconName}</Text>;
+          return <Icon name={iconName} size={20} color="#fff" />;
         },
       })}>
       <Tab.Screen

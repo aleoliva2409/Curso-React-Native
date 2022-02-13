@@ -1,5 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
 import Tab1Screen from '../screens/Tab1Screen';
 import StackNavigator from './StackNavigator';
 import { colors } from '../theme/appTheme';
@@ -25,22 +26,22 @@ const TabsNavigator = () => {
         tabBarLabelStyle: {
           fontSize: 15,
         },
-        tabBarIcon: ({ color }) => {
+        tabBarIcon: ({ color, size }) => {
           let iconName: string = '';
 
           switch (route.name) {
             case 'Tab1Screen':
-              iconName = 'T1';
+              iconName = 'home-outline';
               break;
             case 'Tab2Screen':
-              iconName = 'T2';
+              iconName = 'grid-outline';
               break;
             case 'StackNavigator':
-              iconName = 'ST';
+              iconName = 'file-tray-stacked-outline';
               break;
           }
 
-          return <Text style={{ color }}>{iconName}</Text>;
+          return <Icon name={iconName} size={size} color="#fff" />;
         },
       })}>
       <Tab.Screen

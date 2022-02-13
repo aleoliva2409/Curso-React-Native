@@ -1,6 +1,6 @@
 import React from 'react';
-
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
 import ChatScreen from '../screens/ChatScreen';
 import ContactScreen from '../screens/ContactScreen';
 import AlbumScreen from '../screens/AlbumScreen';
@@ -29,21 +29,22 @@ const TopTabNavigator = () => {
           shadowColor: 'transparent', // ? para IOS
         },
         tabBarIcon: ({ color }) => {
+          // ? No viene la propiedad size en las props de este tabNavigator pero si en el de IOS
           let iconName: string = '';
 
           switch (route.name) {
             case 'ChatScreen':
-              iconName = 'Ch';
+              iconName = 'chatbox-outline';
               break;
             case 'ContactScreen':
-              iconName = 'Ct';
+              iconName = 'mail-outline';
               break;
             case 'AlbumScreen':
-              iconName = 'Al';
+              iconName = 'images-outline';
               break;
           }
 
-          return <Text style={{ color }}>{iconName}</Text>;
+          return <Icon name={iconName} size={20} color="#000" />;
         },
       })}
       style={{

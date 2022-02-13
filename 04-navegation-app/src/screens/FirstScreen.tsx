@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 // import { StackScreenProps } from '@react-navigation/stack';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { Text, View, Button, TouchableOpacity } from 'react-native';
 import { styles } from '../theme/appTheme';
 import { DrawerScreenProps } from '@react-navigation/drawer';
@@ -11,13 +12,16 @@ const FirstScreen = ({ navigation }: Props) => {
   useEffect(() => {
     navigation.setOptions({
       headerLeft: () => (
-        <Button title="Menu" onPress={() => navigation.toggleDrawer()} />
+        <TouchableOpacity
+          onPress={() => navigation.toggleDrawer()}
+          style={{ marginLeft: 10 }}>
+          <Icon name="menu-outline" size={40} color="#000" />
+        </TouchableOpacity>
       ),
     });
   }, []); // ? esto sirve para colocarle un boton para hacer el toogle pero Drawer ya incluye dicho menu en la ultima version
   // ? no se esta usando el header de drawer porque necesito el del stack navigator
 
-  
   return (
     <View style={styles.container}>
       <Text style={styles.title}>First Screen</Text>
@@ -42,6 +46,9 @@ const FirstScreen = ({ navigation }: Props) => {
               dni: '2222222',
             })
           }>
+          <Text>
+            <Icon name="man-outline" size={35} color="#fff" />
+          </Text>
           <Text style={styles.textBtn}>Pedro</Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -54,6 +61,9 @@ const FirstScreen = ({ navigation }: Props) => {
               dni: '333333',
             })
           }>
+          <Text>
+            <Icon name="woman-outline" size={35} color="#fff" />
+          </Text>
           <Text style={styles.textBtn}>Maria</Text>
         </TouchableOpacity>
       </View>

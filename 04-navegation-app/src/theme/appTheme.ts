@@ -35,10 +35,13 @@ export const styles = StyleSheet.create({
     margin: 30
   },
   menuButton: {
-    marginVertical: 10
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 10,
   },
   menuText: {
-    fontSize: 18
+    fontSize: 20,
+    paddingHorizontal: 5
   }
 });
 
